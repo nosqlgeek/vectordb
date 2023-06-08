@@ -21,7 +21,7 @@ if __name__ == '__main__':
     db.add("article", "fox", {"descr": "A very simple example", "labels": ["example"]},
            "The quick brown fox jumps over the lazy dog.")
 
-    print("Checking for users with the same interest ...")
+    print("Checking for similar texts ...")
     search_text = "The quick brown dog jumps over the lazy mouse."
     for r in db.vector_search("*", search_text, 1, index_name="texts"):
         print("score = {}".format(r["score"]))
