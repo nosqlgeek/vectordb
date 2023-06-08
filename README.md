@@ -11,4 +11,5 @@ The Redis commands are wrapped by using a `VectorDB` class.
 
 ## Examples
 
-* [How to use vector similarity search to build a recommendation engine](./examples/vss-rec/)
+* [Use vector similarity search to build a recommendation engine](./examples/vss-rec/)
+* [Find similar texts within the database](./examples/vss-text)
