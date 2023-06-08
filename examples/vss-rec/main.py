@@ -1,9 +1,12 @@
+import sys
 import os
-from vector_db import VectorDB
+sys.path.append(os.path.join(os.path.dirname(__file__), "../../src"))
+from config import CONFIG as cfg
+from vectordb import VectorDB
 
 if __name__ == '__main__':
     print("Connecting to the vector database ...")
-    db = VectorDB(os.getenv("DB_HOST"), os.getenv("DB_PORT"), os.getenv("DB_PWD"))
+    db = VectorDB(cfg.get("db_host"), cfg.get("db_port"), cfg.get("db_password"))
 
     print("Deleting all vectors ...")
     db.con.flushall()
